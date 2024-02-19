@@ -1,0 +1,208 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>jj</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css"  href="style.css" />
+    <link rel="icon" type="image/png" rel="icon.jpg">
+    <style>
+        header{
+            background-image: url(background.jpg);
+             width: 719px;
+            height:1280px; 
+            color: red;
+            text-align: center;
+            border:2px solid red;
+
+        }
+        nav{}
+        nav a
+        {
+            list-style-type: none;
+            text-decoration: none;
+
+        }
+        nav a:hover{
+            text-decoration: none;
+        }
+        nav li{
+            display: inline;
+        }
+        #left
+        {
+            float: left;
+
+        }
+        #right
+        {
+            float:right;
+            background-image: url(canada.png);
+            height: 598px;
+            width:688px;
+            position: relative;
+        }
+        #right a
+        {
+            display:block;
+            border :5px solid grey;
+            position:absolute;
+        }
+        #right a:hover 
+        {
+            border: 5px solid #FF2;
+        }
+         a#place1{width: 100px;height: 100px;left: 240px; top:80px;}
+         a#place2{width: 100px;height: 100px;left: 550px; top:20px;}
+         a#place3{width: 100px;height: 100px;left: 165px; top:180px;}
+        #clear
+        {
+            clear:both;
+        }
+        body
+        {
+            background-image: url(back.jpg);
+            width:4176;
+            height:2366;
+        }
+        table
+        {
+            margin-left: auto;
+            margin-right: auto;
+            float: left;
+            border: 2px solid black;
+            border-collapse: collapse;
+            width: 50%;
+               padding-bottom: 2000px;
+               margin-bottom: -2000px;
+               box-sizing: border-box;
+        }
+        th, td
+          {
+          border: 2px solid black;
+          padding: 5px;
+          text-align: center;    
+           }
+           form
+           {
+               float:right;
+               width: 50%;
+               padding-bottom: 2000px;
+               margin-bottom: -2000px;
+               box-sizing: border-box;
+
+
+           }
+           label  
+    { 
+         float: left;
+         width: 100px; clear: left; text-align: right;             
+         padding-right: 10px; margin-top: 10px; 
+    }
+    input, textarea 
+     {
+          display: inline; 
+          margin-top: 10px; 
+     }  
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>JJ</h1>
+        <nav>
+            <ol type="i">
+                <li><a href="">jj</a></li>
+                <li><a href="">jj</a></li>
+            </ol>
+                
+
+        </nav>
+    </header>
+
+    
+    <div id="left">
+            <img src="india.gif"  width="640" height="586" alt="india" usemap="#india">
+            <map name="india" id="india">
+                  <area shape="rect" coords="128,392,407,560" href="#southernpart" alt="woodgroove" />
+                  <area shape="rect" coords="640,580,568,394" href="#penisulaplateau" alt="beban park" />
+                  <area shape="rect" coords="61,1,124,193" href="#northernpart" alt="harewood" />
+                  
+                </map> 
+                <ol type="i">
+                    <li>poda</li>
+                    <li></li>
+                </ol>
+           
+
+        
+    </div>
+    <div id="right">
+       <a href="https://en.wikipedia.org/wiki/British_Columbia	" id="place1"></a>
+       <a href="https://en.wikipedia.org/wiki/Alberta	" id="place2"></a>
+       <a href="https://en.wikipedia.org/wiki/United_States" id="place3"></a>
+    </div>
+    <div id="clear"></div>
+   <div id="southernpart">
+       <p style="border:5px solid red;color:green;">The southern</p>
+   </div>
+   <div id="penisulaplateau">
+        <p style="border:5px solid red;color:green;">The southern</p>
+    </div>
+    <div id="northernpart">
+            <p style="border:5px solid red;color:green;">The southern</p>
+        </div>
+    <table>
+        <caption>caption</caption>
+        <tr>
+            <th colspan="4">Short Descripton</th>
+        </tr>
+        <tr>
+            <th>Country</th>
+            <th>Details</th>
+            <th>discription</th>
+            <th>expense</th>
+        </tr>
+        <tr>
+            <th rowspan="2">Canada</th>
+            <th>ssff</th>
+            <th>fewfe</th>
+            <th>ssd</th>
+            
+        </tr>
+        <tr>
+            <th>sscd</th>
+            <th>bvbn</th>
+            <th>ggf</th>
+        </tr>
+    </table>
+    <form>
+        <fieldset>
+            <legend>avvo</legend>
+            <label>Event</label>
+            <input type="radio" name="event">stock<br>
+            <input type="radio" name="event">Event<br>
+            <label>name</label>
+            <input type="text" name-="name"><br>
+            <label>list</label>
+            <select>
+                <option value="bc">iii</option>
+                <option value="bc">iii</option>
+                <option value="bc">iii</option>
+                <option value="bc">iii</option>
+            </select><br>
+            <label>date</label>
+            <input type="date" name="date"><br>
+            <label>Comment</label>
+            <textarea></textarea><br>
+            <label for="cc">agreement</label>
+            <input type="checkbox" name="yes" id="cc" >yes<br>
+            <input type="checkbox" name="no" >no
+            <input type="submit" id="mysubmit" value="submit">
+
+        </fieldset>
+    </form>
+</html>

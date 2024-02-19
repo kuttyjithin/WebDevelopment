@@ -1,0 +1,39 @@
+<!doctype html>
+<!-- Adopted from Mozilla docs at: https://developer.mozilla.org/en-US/docs/Glossary/grid_areas -->
+<html>
+    <head>
+        <title>Grid Areas Example</title>
+        <style>
+            .wrapper {
+                display: grid;
+                grid-template-columns: 1fr 1fr 3fr; 
+                /*repeat(3,1fr);*/
+                grid-template-rows: 100px 200px 50px;
+                grid-template-areas: 
+                    "a b b"
+                    "a b b"
+                    "c b b";
+            }
+            .item1 {
+                grid-area: a;
+                background-color: orange;
+                padding: 10px;
+            }
+            .item2 {
+                grid-area: b;
+                background-color: yellow;
+            }
+            .item3 {
+                grid-area: c;
+                background-color: lime;
+            }
+        </style>
+    </head>
+    <body>
+            <div class="wrapper">
+                    <div class="item1">Item 1</div>
+                    <div class="item2">Item 2</div>
+                    <div class="item3">Item 3</div>
+            </div>
+    </body>
+</html>

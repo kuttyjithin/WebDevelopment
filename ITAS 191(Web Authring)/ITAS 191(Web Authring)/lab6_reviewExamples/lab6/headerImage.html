@@ -1,0 +1,132 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Dave Croft - Lab 6 Review</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        form {
+            background-color: #ADD8E6;
+            border: 1px solid black;
+            font-family: Arial, sans-serif;
+            padding: 10px;
+        }
+
+        label {
+            float: left;
+            width: 150px;
+            clear: both;
+            text-align: right;
+            padding-right: 10px;
+            margin-top: 10px;
+        }
+
+        input,
+        textarea,
+        select {
+            margin-top: 10px;
+            display: inline;
+        }
+
+        #submit {
+            box-sizing: border-box;
+            width: 20%;
+            MARGIN-left: 40%;
+        }
+
+        .redStar {
+            color: red;
+        }
+
+		.orangeInput {
+			color: orange;
+		}
+        
+        /*
+        header {
+            width: 100%;
+            height: 100%;
+            background-image:url("bathtub.jpg");
+        }
+        */
+
+        #logo-container {
+
+        }
+        #logo-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Top left text */
+        
+        .top-left {
+            position: absolute;
+            top: 10px;
+            left: 15px;
+        }
+        
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        
+            <div id="logo-container"><img src="https://dev.itas.ca/~croftd/bathtub.jpg" alt="" /></div>
+        
+            <h1 class="top-left">Bathtub Race Signup Sheet</h1>
+    </header>
+   
+
+    <p>Note:
+        <span class="redStar">* </span>= Mandatory Field</p>
+
+    <form action="https://dev.itas.ca/~croftd/processForm.php" method="post">
+
+        <label for="group1"><span class="redStar">* </span>Event Type: </label>
+        <input type="radio" name="event" id="group1" required> Stock
+        <br>
+        <input type="radio" name="event"> Modified
+        <br>
+
+
+        <label for="First"><span class="redStar">* </span>First Name: </label>
+        <input type="text" name="First" class="orangeInput" value="Catman" required>
+        <br>
+
+        <label for="Last"><span class="redStar">* </span>Last Name: </label>
+        <input type="text" name="Last" value="" required>
+        <br>
+
+
+        <label for="province"><span class="redStar">* </span>Province: </label>
+        <select name="province" id="province" required>
+            <option value="">None</option>
+                <option value="BC">BC</option>
+                <option value="AB">AB</option>
+                <option value="SK">SK</option>
+            </select>
+        <br>
+
+        <label for="comment">Comments:</label>
+        <textarea name="comment" form="comment">Enter text here...</textarea>
+        <br>
+
+       
+        <br>
+
+        <input type="submit" value="Submit" id="submit">
+
+
+
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Final Project</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="icon" type="image/jpg" href="images/jj.jpg"/>
+      <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+      <link rel="stylesheet" type="text/css" media="screen" href="css/footer.css" />
+      <link rel="stylesheet" type="text/css" media="screen" href="css/font-awesome.min.css" />
+      <link rel="stylesheet" type="text/css" media="screen" href="css/social.css"/>
+      
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+     /*  #map {
+        height: 100%;
+      } */
+      /* Optional: Makes the sample page fill the window. */
+      /* html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        border :20px solid white;
+        background-color: white;
+       } */
+
+       #right
+        {
+          float:right;
+        }
+
+        #design
+        {
+          color: red;
+        }
+       
+      
+       
+
+    </style>
+    
+  </head>
+  
+  <body>
+     <!-- Header with different Links -->
+  <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+          <a class="navbar-brand" href="index.html" style="color:blue">JJ CODE</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="c++.html">C++</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="java.html">JAVA</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="csss.html">CSS</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="html.html">HTML</a>
+            </li>
+            <li class="nav-item active">
+              <div id="right">
+              <a class="nav-link" href="sign.html">SIGN IN </a>
+            </div>
+            </li>
+            <li class="nav-item active">
+                <div id="right">
+                <a class="nav-link" href="signup.html">SIGN UP </a>
+              </div>
+              </li>
+          </ul>
+  
+  
+          <form class="form-inline mt-2 mt-md-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="background-color:brown">Search</button>
+          </form>
+        </div>
+      </nav>
+    </header>
+
+
+   
+    <!-- <div id="map"></div>
+    <script>
+        var map;
+         
+         function initMap() {
+            var myLatLng = {lat: 49.1579261, lng: -123.9676891};
+            var wavwfront={lat:49.1812789,lng:-123.9443465};
+            var depaturebay={lat:49.2016915,lng:-123.9752335};
+            var lanzville={lat:49.2516471,lng:-123.0762009};
+   
+   
+   
+           map = new google.maps.Map(document.getElementById('map'), {
+             center: {lat: 49.1575483, lng: -123.9664345},
+             zoom: 12
+           });
+           var contentString = 
+         '<h1 >Viu Library</h1>'+
+         '<p><b>Library</b>, also referred to as <b>VIU Palace</b>, is a large ' +
+         'buiding which has all the essential tools for the stuudents to study '+
+         ' I do all my studies and assignment right here because this is a quiet place'+
+         ' where we would not be distrubed by any manner.'+
+         ' We are also provided with a computer to browse the internet to get extra information'+
+         ' which is related to our Studies.'      
+         '</p>';
+   
+            var contentString2= '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Water Front<\h1>'+
+               '<div id="bodyContent">'+
+            '<p> This is a small hotel which is near to viu.<br>I love this' +
+             ' place because i work here.There is a marine for this place where a'+
+             ' cool breeze always blow through that area.Many Vistors pass along'+
+             ' this path to do there evening walk '+
+             '</div>'+
+             '</div>';
+   
+            var contentString3= '<h1>Depature Bay<\h1>'+
+            '<p> I love this place because this is the first place that i saw '+
+            'when i came to namanimo from india.This is the biggest bay in Nanaimo'+
+            '.All the main ferry that is moving to Vancouver which is the one of the'+
+            ' Bigest place in canada comes to this bay<\p>';
+   
+            
+                           
+            
+   
+            var infowindow = new google.maps.InfoWindow({
+            content: contentString
+            });
+   
+            var infowindow2 =  new google.maps.InfoWindow({
+            content: contentString2
+            });
+   
+            var infowindow3 =  new google.maps.InfoWindow({
+            content: contentString3
+            });
+   
+            
+   
+            var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'Library' ,
+            icon:'letterA.jpg'       
+            });
+   
+            var marker1 = new google.maps.Marker({
+            position: wavwfront,
+             map: map,
+             title: 'WaveFront' ,
+             icon:'letterB.jpg'       
+             }); 
+   
+             var marker2 = new google.maps.Marker({
+             position: depaturebay,
+             map: map,
+            title: 'Depature Bay' ,
+             icon:'letterC.jpg'       
+             });
+   
+             
+            marker.addListener('click', function() {
+            infowindow.open(map, marker);
+           });
+   
+           marker1.addListener('click', function() {
+            infowindow2.open(map, marker1);
+           });
+   
+           marker2.addListener('click', function() {
+            infowindow3.open(map, marker2);
+           });
+   
+                 
+            
+   
+            var PlanCoordinates = [
+            {lat: 49.2014249, lng: -123.9476755},
+            {lat: 49.1900879, lng: -123.9463974},
+            {lat: 49.1769399, lng: -123.9377278},
+            {lat: 49.1789152, lng: -123.9330172},
+            {lat: 49.1828338, lng: -123.9340290},
+            {lat: 49.1798909, lng: -123.9263760},
+            {lat: 49.1900997, lng: -123.9201201},
+            {lat: 49.1942323, lng: -123.9243503},
+            {lat: 49.1990252, lng: -123.9227282},
+            {lat: 49.2038627, lng: -123.9432193},
+            {lat: 49.2014249, lng: -123.9476755},
+            ];//using polylines rather than polygons because it loos better.
+   
+            var Path = new google.maps.Polyline({
+            path: PlanCoordinates,
+            geodesic: true,
+            strokeColor: '#FF0000',
+            strokeOpacity: 1.0,
+            strokeWeight: 2
+            });
+   
+            Path.setMap(map);
+   
+         }
+         
+         
+   
+   
+       </script>
+       <script src="https://www.viu.ca/map"
+       async defer></script>
+    
+    
+    <h3>Legend</h3>
+    <ol>
+      <li><img src="letterA.jpg" alt="letter  a">Vancouver Island university</li>
+      <li><img src="letterB.jpg" alt="letter  a">WaterFront & Mariners</li>
+      <li><img src="letterC.jpg" alt="letter  a">Depature Bay</li>
+    </ol>
+   -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+  </body>
+
+  
+
+</html>

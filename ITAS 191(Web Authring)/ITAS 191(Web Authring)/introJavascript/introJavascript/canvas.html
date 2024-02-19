@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/> 
+
+  <style>
+  
+  
+  </style>
+
+  <script>
+    function draw() {
+
+        var canvas = document.getElementById('canvas');
+
+        // note to self - this is the wrong language
+        //System.out.println("Hello");
+
+        console.log("Hello from Javascript");
+
+
+        let cat = 5;
+
+        if (true) {
+          console.log("here is the value of cat: " + cat);
+          let dog = "Spot";
+
+        }
+        console.log("here is the value of dog: " + dog);
+     
+        var ctx = canvas.getContext('2d');
+
+        ctx.fillStyle = 'rgb(200, 0, 0)';
+        ctx.fillRect(10, 10, 50, 50);
+
+        ctx.fillStyle = 'rgba(0, 0, 200, 0.5)';
+        ctx.fillRect(30, 30, 250, 250);
+      
+    }
+
+    function showMessage() {
+      console.log("Hello again from JavaScript");
+      alert("Hi from an alert box");
+    }
+
+    console.log("TESTING 123");
+
+
+  </script>
+
+  <style>
+
+  </style>
+ </head>
+ <body onload="draw();">
+   <h1>Intro to Canvas</h1>
+   <canvas id="canvas" width="400" height="400">
+
+   </canvas>
+
+   <button onclick="showMessage()">Do Stuff</button>
+ </body>
+</html>

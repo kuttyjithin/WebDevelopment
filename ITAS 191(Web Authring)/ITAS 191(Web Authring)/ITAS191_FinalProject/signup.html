@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Final Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/jpg" href="images/jj.jpg"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/social.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+    <style>
+        /* Make the image fully responsive */
+        .carousel-inner img {
+            width: 100%;
+            height: auto;
+        }
+        #right
+        {
+          float:right;
+        }
+        body{
+            text-align: center;
+            align-content: center;
+        }
+        #left
+        {
+            text-align: left;
+        }
+        #design
+        {
+            color:blue;
+        }
+     </style>
+     <script>
+   
+        function isPasswordMatch()
+        {
+          var password=document.forms["myForm"]["password"].value;
+          var repassword=document.forms["myForm"]["repassword"].value; 
+          if(password!=repassword)
+          {
+            document.getElementById("text").innerHTML="Password Does not match";
+          }
+          else
+          {
+            document.getElementById("text").innerHTML="Password  matches";
+          }
+        }
+        function validateForm() {
+        var x = document.forms["myForm"]["fname"].value;   
+        var pin_code=document.forms["myForm"]["zip"].value;
+        var user_mobile=document.forms["myForm"]["phone"].value;
+        var user_id=document.forms["myForm"]["gmail"].value;
+        var pat1=/^\d{6}$/;
+        var pattern=/^\d{10}$/;
+        var filter=/^([a-z A-Z 0-9 _\.\-])+\@(([a-z A-Z 0-9\-])+\.)+([a-z A-z 0-9]{3,3})+$/;
+               
+        if (x == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+            if(pin_code==""||pin_code.length!=6)
+            {
+              alert("Postal code is not right");
+              return false;
+            }
+            return (true);
+            
+        /* if(!filter.test(user_id.value))
+        {
+        alert("Email is in www.gmail.com format");
+        user_id.focus();
+        return false;
+        }
+        if(!pattern.test(user_mobile.value))
+        {
+        alert("Phone nubmer is in 0123456789 format ");
+        user_mobile.focus();
+        return false;
+        }
+        if(!pat1.test(pin_code.value))
+        {
+        alert("Pin code should be 6 digits ");
+        pin_code.focus();
+        return false;
+        } */
+        }
+    </script>
+</head>
+<body class="bg-light">
+    
+  <!-- Header with different Links -->
+  <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="index.html" style="color:blue">JJ CODE</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="c++.html">C++</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="java.html">JAVA</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="csss.html">CSS</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="html.html">HTML</a>
+              </li>
+              <li class="nav-item active">
+                <div id="right">
+                <a class="nav-link" href="sign.html">SIGN IN </a>
+              </div>
+              </li>
+              <li class="nav-item active">
+                  <div id="right">
+                  <a class="nav-link" href="signup.html">SIGN UP </a>
+                </div>
+                </li>
+            </ul>
+    
+            
+            <form class="form-inline mt-2 mt-md-0" method="POST" action="https://dev.itas.ca/~croftd/processForm.php ">
+              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="background-color:brown">Search</button>
+            </form>
+          </div>
+        </nav>
+      </header>
+
+
+
+      <!--My Form Valdation with the solution-->
+
+        <div class="container">
+          <div class="py-5 text-center">
+            <img class="d-block mx-auto mb-4" src="images/jj.jpg" alt="" width="72" height="72">
+            <h2 id="design">JJ CODE</h2>
+          </div>
+          <h2 id="left">SIGN UP</h2>
+            
+            <div class="col-md-8 order-md-1">
+              
+              <form class="needs-validation" name="myForm" onsubmit="return (validateForm());" method="POST" action="https://dev.itas.ca/~croftd/processForm.php " >
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="firstName">First name</label>
+                    <input type="text" class="form-control" id="firstName" name="fname" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                      Valid first name is required.
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="lastName">Last name</label>
+                    <input type="text" class="form-control" id="lastName" name="lname" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                      Valid last name is required.
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="mb-3">
+                  <label for="username">Username</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">@</span>
+                    </div>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
+                    <div class="invalid-feedback" style="width: 100%;">
+                      Your username is required.
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="firstName">PASSWORD</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="New pasword" value="" required>
+                    
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="lastName">Re-Type PASSWORD</label>
+                    <input type="password" class="form-control" id="password1" name="repassword"  placeholder="Retype new password" onchange="isPasswordMatch()" value="" required>
+                    <p id="text"></p>
+                  </div>
+                </div>
+    
+                <div class="mb-3">
+                  <label for="email">Email </label>
+                  <input type="email" class="form-control" id="email" name="email" >
+                  <div class="invalid-feedback">
+                    Please enter a valid email address for shipping updates.
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email">Phone </label>
+                    <input type="number" class="form-control" id="number" name="phone" placeholder="2507970570">
+                    <div class="invalid-feedback">
+                      Please enter a valid email address for shipping updates.
+                    </div>
+                  </div>
+    
+                <div class="mb-3">
+                  <label for="address">Address</label>
+                  <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+                  <div class="invalid-feedback">
+                    Please enter your shipping address.
+                  </div>
+                </div>
+    
+                <div class="mb-3">
+                  <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
+                  <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+                </div>
+
+                <div class=" mb-3">
+                  <label for="comment">COMMENT:</label>
+                  <textarea  class="form-control" id="comment" name="fname" placeholder="" ></textarea>
+                </div>
+
+    
+                <div class="row">
+                  <div class="col-md-5 mb-3">
+                    <label for="country">Country</label>
+                    <select class="custom-select d-block w-100" id="country" required>
+                      <option value="">Choose...</option>
+                      <option>United States</option>
+                      <option>Canada</option>
+                      <option>Mexico</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid country.
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="state">State</label>
+                    <select class="custom-select d-block w-100" id="state" required>
+                      <option value="">Choose...</option>
+                      <option>California</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please provide a valid state.
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label for="zip">Zip</label>
+                    <input type="text" class="form-control" id="zip" name="zip" placeholder="V9R 2Z1" required>
+                    <div class="invalid-feedback">
+                      Zip code required.
+                    </div>
+                  </div>
+                </div>
+                <hr class="mb-4">
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="same-address">
+                  <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="save-info">
+                  <label class="custom-control-label" for="save-info">Save this information for next time</label>
+                </div>
+                <hr class="mb-4">
+    
+                <h4 class="mb-3">Payment</h4>
+    
+                <div class="d-block my-3">
+                  <div class="custom-control custom-radio">
+                    <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+                    <label class="custom-control-label" for="credit">Credit card</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+                    <label class="custom-control-label" for="debit">Debit card</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
+                    <label class="custom-control-label" for="paypal">Paypal</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="cc-name">Name on card</label>
+                    <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                    <small class="text-muted">Full name as displayed on card</small>
+                    <div class="invalid-feedback">
+                      Name on card is required
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="cc-number">Credit card number</label>
+                    <input type="number" class="form-control" id="cc-number" placeholder="" required>
+                    <div class="invalid-feedback">
+                      Credit card number is required
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-3 mb-3">
+                    <label for="cc-expiration">Expiration</label>
+                    <input type="date" class="form-control" id="cc-expiration"  required>
+                    <div class="invalid-feedback">
+                      Expiration date required
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label for="cc-expiration">CVV</label>
+                    <input type="number" class="form-control" id="cc-cvv" name="cvv" placeholder="" required>
+                    <div class="invalid-feedback">
+                      Security code required
+                    </div>
+                  </div>
+                </div>
+                <hr class="mb-4">
+                <button class="btn btn-primary btn-lg btn-block" type="submit">SIGNUP</button>
+              </form>
+            </div>
+          </div>
+        
+
+</body>

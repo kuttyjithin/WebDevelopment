@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Final Project</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="icon" type="image/jpg" href="images/jj.jpg"/>
+      <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+      <link rel="stylesheet" type="text/css" media="screen" href="css/footer.css" />
+      <link rel="stylesheet" type="text/css" media="screen" href="css/font-awesome.min.css" />
+      <link rel="stylesheet" type="text/css" media="screen" href="css/social.css"/>
+      
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+       #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+       html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        border :20px solid white;
+        background-color: white;
+       } 
+
+       #right
+        {
+          float:right;
+        }
+
+        #design
+        {
+          color: red;
+        }
+        body
+        {
+          background-color: aqua;
+        }
+      
+       
+
+    </style>
+    
+  </head>
+  
+  <body>
+     <!-- Header with different Links -->
+  <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+          <a class="navbar-brand" href="index.html" style="color:blue">JJ CODE</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="c++.html">C++</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="java.html">JAVA</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="csss.html">CSS</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="html.html">HTML</a>
+            </li>
+            <li class="nav-item active">
+              <div id="right">
+              <a class="nav-link" href="sign.html">SIGN IN </a>
+            </div>
+            </li>
+            <li class="nav-item active">
+                <div id="right">
+                <a class="nav-link" href="signup.html">SIGN UP </a>
+              </div>
+              </li>
+          </ul>
+  
+  
+          <form class="form-inline mt-2 mt-md-0"  method="POST" action="https://dev.itas.ca/~croftd/processForm.php ">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" >
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="background-color:brown">Search</button>
+          </form>
+        </div>
+      </nav>
+    </header>
+
+
+   
+     <div id="map"></div>
+    <script>
+        var map;
+         
+         function initMap() {
+            var myLatLng = {lat: 49.1579261, lng: -123.9676891};
+            var wavwfront={lat:49.1812789,lng:-123.9443465};
+            var depaturebay={lat:49.2016915,lng:-123.9752335};
+            var lanzville={lat:49.2516471,lng:-123.0762009};
+   
+   
+   
+           map = new google.maps.Map(document.getElementById('map'), {
+             center: {lat: 49.1575483, lng: -123.9664345},
+             zoom: 12
+           });
+           var contentString = 
+         '<h1 >Java Instution</h1>'+
+         '<p><b>Location:</b> Vancouver Island University '+
+         ' 900 Fifth St,Buliding 180,Room Number:143' +  
+         '</p>';
+   
+            var contentString2=  '<h1 >CSS & HTML Institution</h1>'+
+         '<p><b>Location:</b> Waterfront Suites & Marina'+
+         ' 1000 Stewart Ave,Buliding 100,Marine' +
+         '</p>';
+   
+            var contentString3=  '<h1 >C++ Institution</h1>'+
+         '<p><b>Location:</b>, E&N Trail, Buliding 180,Room Number:143 ' +      
+         '</p>';
+            
+                           
+            
+   
+            var infowindow = new google.maps.InfoWindow({
+            content: contentString
+            });
+   
+            var infowindow2 =  new google.maps.InfoWindow({
+            content: contentString2
+            });
+   
+            var infowindow3 =  new google.maps.InfoWindow({
+            content: contentString3
+            });
+   
+            
+   
+            var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'JAVA INSTUTION' ,
+            icon:'images/letterA.jpg'       
+            });
+   
+            var marker1 = new google.maps.Marker({
+            position: wavwfront,
+             map: map,
+             title: 'CSS and HTML INSTUTION' ,
+             icon:'images/letterB.jpg'       
+             }); 
+   
+             var marker2 = new google.maps.Marker({
+             position: depaturebay,
+             map: map,
+            title: 'C++ INSTUTION' ,
+             icon:'images/letterC.jpg'       
+             });
+   
+             
+            marker.addListener('click', function() {
+            infowindow.open(map, marker);
+           });
+   
+           marker1.addListener('click', function() {
+            infowindow2.open(map, marker1);
+           });
+   
+           marker2.addListener('click', function() {
+            infowindow3.open(map, marker2);
+           });
+   
+                 
+            
+   
+   
+         }
+         
+         
+   
+   
+       </script>
+       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHBarigyzVMqox5mgyZRuE-cgu5aJSWps&callback=initMap"
+       async defer></script>
+    
+    
+    <!-- START THE FEATURETTES -->
+  
+    <hr class="featurette-divider">
+  
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading" id="design">JAVA INSTUTION </h2><br><br>
+        <img src="images/letterA.jpg" alt=""><h3>Location</h3>
+        <p class="lead">Vancouver Island University
+          900 Fifth St,Buliding 180,Room Number:143</p>
+        <a class="btn btn-lg btn-block btn-outline-primary" href="java.html" role="button">More Details</a>
+      </div>
+      <div class="col-md-5">
+        <img class="featurette-image img-fluid mx-auto" src="images/javaAA.jpg" alt="Generic placeholder image">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading" id="design">CSS INSTUTION </h2>
+        <img src="images/letterB.jpg" alt=""> <h3>Location</h3>
+        <p class="lead">Waterfront Suites & Marina
+          1000 Stewart Ave,Buliding 100,Marine</p>
+        <a class="btn btn-lg btn-block btn-outline-primary" href="c++.html" role="button">More Details</a>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img class="featurette-image img-fluid mx-auto" src="images/cssAA.png" alt="Generic placeholder image">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+  
+    <div class="row featurette">
+      <div class="col-md-7 ">
+        <h2 class="featurette-heading"  id="design">C++ INSTUTION </h2>
+        <img src="images/letterC.jpg" alt=""> <h3>Location</h3>
+        <p class="lead">E&N Trail, Buliding 180,Room Number:143</p>
+        <a class="btn btn-lg btn-block btn-outline-primary" href="c++.html" role="button">More Details</a>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img class="featurette-image img-fluid mx-auto" src="images/cAA.png" alt="Generic placeholder image">
+      </div>
+    </div>
+
+
+   
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+      <!--Footer -->
+
+
+      <footer class="container py-5">
+        <div class="row">
+          <div class="col-12 col-md">
+            <img src="images/jj.jpg" alt="icon" height="75" width="75">
+            <small class="d-block mb-3 text-muted">&copy; 2018-2019</small>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Features</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-muted" href="c++.html">C++</a></li>
+              <li><a class="text-muted" href="java.html">JAVA</a></li>
+              <li><a class="text-muted" href="html.html">HTML</a></li>
+              <li><a class="text-muted" href="csss.html">CSS</a></li>
+              
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+              <h5>Resources</h5>
+              <ul class="list-unstyled text-small">
+                <li><a class="text-muted" href="gallary.html">Gallary</a></li>
+                <li><a class="text-muted" href="table.html">Analysis</a></li>                     
+              </ul>
+            </div>
+          
+          
+          <div class="col-6 col-md">
+            <h5>About</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-muted" href="location.html">Location</a></li>
+              
+            </ul>
+          </div>
+
+          <div class="col-6 col-md">
+              <h5>Support</h5>
+              <a href="https://www.facebook.com/Jjcode-560082237737788/" class="fa fa-facebook"></a>                  
+              <a href="https://twitter.com/JithinJ27561689" class="fa fa-twitter"></a>
+              <a href="https://www.instagram.com/?hl=en" class="fa fa-instagram"></a>
+              
+            </div>
+
+        </div>
+      </footer>
+
+
+  </body>
+
+  
+
+</html>

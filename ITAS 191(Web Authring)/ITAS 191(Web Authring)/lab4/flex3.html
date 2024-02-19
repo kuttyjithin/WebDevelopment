@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+    <style>
+        .wrapper
+        {
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;  
+            
+            -webkit-flex-flow: row wrap;
+            flex-flow: row wrap;
+            
+            font-weight: bold;
+            text-align: center;
+          }
+          
+          .wrapper> * 
+          {
+            padding: 10px;
+            flex: 1 100%;
+          }
+          
+          .header
+           {
+            background: tomato;
+          }
+          
+          .footer
+           {
+            background: lightgreen;
+          }
+          
+          .main
+           {
+            
+            background: deepskyblue;
+          }
+          .main ul
+          {
+              list-style-type:none;
+              
+              
+              
+          }
+          #cats
+          {
+            background-color: orangered;
+              padding: 20px;
+              color: white;
+              border:2px ;
+              text-align: center;
+              margin-bottom: 10px;
+              width: 20%;   
+              flex-grow: 20;          
+          }
+          #dogs
+          {
+            background-color: orangered;
+              padding: 20px;
+              color: white;
+              border:2px ;
+              text-align: center;
+              margin-bottom: 10px;
+              width: 20%; 
+              flex-grow: 20;
+          }
+          #mice
+          {
+            background-color: orangered;
+              padding: 20px;
+              color: white;
+              border:2px ;
+              text-align: center;
+              margin-bottom: 10px;
+              width: 20%; 
+              flex-grow: 20;
+          }
+          #rabbits
+          {background-color: orangered;
+              padding: 20px;
+              color: white;
+              border:2px ;
+              text-align: center;
+              margin-bottom: 10px;
+              width: 20%; 
+              flex-grow: 20;
+              
+          }
+          #duck
+          {
+            background-color: orangered;
+              padding: 20px;
+              color: white;
+              border:2px ;
+              text-align: center;
+              margin-bottom: 10px;
+              width: 20%; 
+              flex-grow: 20;
+
+          }
+          #elephant
+          {
+            background-color: orangered;
+              padding: 20px;
+              color: white;
+              border:2px ;
+              text-align: center;
+              margin-bottom: 10px;
+              width: 20%; 
+              flex-grow: 20;
+              
+          }
+          
+          .aside-1
+           {
+            background: gold;
+          }
+          
+          .aside-2 {
+            background: hotpink;
+          }
+          table, th, td
+           {
+          border: 1px solid black;
+          border-collapse: collapse;
+          margin-left:auto; 
+          margin-right:auto;
+           }
+         th, td
+          {
+          padding: 5px;
+          text-align: center;    
+           }
+          @media all and (min-width: 600px)
+           {
+            .aside { flex: 1 auto; }
+          }
+          
+          @media all and (min-width: 800px) 
+          {
+            .main    { flex: 3 0px; }
+            .aside-1 { order: 1; } 
+            .main    { order: 2; }
+            .aside-2 { order: 3; }
+            .footer  { order: 4; }
+          }
+          
+          
+    </style>
+</head>
+<body>
+        <div class="wrapper">
+                <header class="header">Header</header>
+                <article class="main">
+                  <ul>
+                      <li id="cats">CATS</li>
+                      <li id="dogs">DOGS</li>
+                      <li id="mice">MICE</li>
+                      <li id="rabbits">Rabbit</li>
+                      <li id="duck">Duck</li>
+                      <li id="elephant">Elephant</li>
+                  </ul>
+                </article>
+                <aside class="aside aside-1">
+                        <img srcset="jj-240.jpg 240w,
+                        jj-320w.jpg 320w,
+                        jj-480w.jpg 480w,
+                        jj-800w.jpg 800w"
+                sizes="(max-width: 240px) 220px,  
+                       (max-width: 320px) 280px,
+                       (max-width: 480px) 440px,
+                       800px"
+                src="jj-800w.jpg" alt="An image of a DOGS">          
+                </aside>
+                <aside class="aside aside-2">Aside 2</aside>
+                <footer class="footer">
+                    <table border="2">
+                        <caption>Time Table</caption>
+                        <tr>
+                            <th>Instructor</th>
+                            <th>Course</th>
+                            <th>Days</th>
+                        </tr>
+                        <tr>
+                            <th rowspan="2">Brandon pitt</th>
+                            <th>Windows 7</th>
+                            <th>wednesday</th>
+                        </tr>
+                        <tr>
+                            <th>Hardware</th>
+                            <th>Monday</th>
+                        </tr>
+                        <tr>
+                            <th>David Croft</th>
+                            <th>HTML</th>
+                            <th>Tuesday</th>
+
+                        </tr>
+                        <tr>
+                            <th>Mark Dutchuk</th>
+                            <th>Java</th>
+                            <th>Thursday</th>
+                        </tr>
+                        <tr>
+                            <th colspan="3">Vancouver Island University</th>
+                       </tr>
+                    </table>
+                </footer>
+       </div>   
+          
+</body>
+</html>

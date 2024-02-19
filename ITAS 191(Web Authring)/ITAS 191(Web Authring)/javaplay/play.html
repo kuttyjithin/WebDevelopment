@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <header>
+            <h1>Rabbits of VIU</h1>
+        </header>
+        
+        <nav>
+              <ol>
+              <li><a href="#zenrabbits">Zen Rabbits</a></li>
+              <li><a href="#itrabbits">IT Rabbits</a></li>
+              <li><a href="#wilds">The Wilds</a></li>
+            </ol>
+        </nav>
+        
+        <section id="content">
+        
+          <div id="map">
+              <img src="https://dev.itas.ca/~croftd/VIU_RabbitsMap.png" alt="imagesof map" width="960" height="802" usemap="#india">
+                <map name="india" id="india">
+                            
+                            <area shape="circle" coords="380,178,20" href="#zenrabbits" alt="zenrabbits" />
+                            <area shape="circle" coords="495,486,20" href="#itrabbits" alt="itrabbits" />
+                            <area shape="rect" coords="736,315,960,802" href="#wilds" alt="wilds" />
+                            
+                        </map> 
+            </div>
+            
+          <div id="descriptions">
+              <h2>Descriptions</h2>
+              <div id="zenrabbits">
+                    <h3>Zen Rabbits</h3>
+                    <p>They are the most beautiful rabbits in the world. Moreover, the most poisonous rabbits in the world
+                        <br> .However, the people are not allowed to consume or kill this rabbit.
+                    </p>
+                    <img src="https://dev.itas.ca/~jithin.jose/zenrabits.jpg" alt="a cute zen rabits">
+                </div>
+              <div id="itrabbits">
+                    <h3>IT Rabbits</h3>
+                    <p>This is one of the most intelligent rabbits in the world.This rabbits can act like a dog in main cases.
+                        <br> Not only this rabbits helped the police but also saved the life of many people.
+                    </p>
+                    <img src="https://dev.itas.ca/~jithin.jose/itrabits.jpg" alt="a small it rabit">
+                </div>
+              <div id="wilds">
+                    <h3>The Wilds</h3>
+                    <p>This is the most dangerous animal in the world. This animal does not kill the humans by poisoning the fruits but also consume animals.
+                        <br>
+                    </p>
+                    <img src="https://dev.itas.ca/~jithin.jose/wildrabit.png" alt="a wild rabit">
+        
+                </div>
+            </div>
+            
+          <div id="topFiveRabbits">
+                <h2>Top Five Rabbits</h2>
+                <table>
+                    
+                        <caption>Top 5 Rabbits</caption>
+                    <tr>
+                        <th>Name </th>
+                        <th>Weight</th>
+                        <th>Colour</th>
+                        <th>Home zone </th>
+                        <th>Special power</th>
+                    </tr>
+                    <tr>
+                        <td>IT Rabbits</td>
+                        <td rowspan="2">12.5kg</td>
+                        <td>green</td>
+                        <td>IT156</td>
+                        <td>power of dog</td>
+                    </tr>
+              <tr>
+                            <td>Zen Rabbits</td>					
+                            <td>brown</td>
+                            <td>Cafteria</td>
+                            <td>Poison the fruits</td>
+                        </tr>
+                        <tr>
+                                <td>The Wilds</td>
+                                <td>15 kg</td>
+                                <td>blue</td>
+                                <td>Outside VIU</td>
+                                <td>Steal items</td>
+                            </tr>
+                            <tr>
+                                    <td>Stormy Rabbits</td>
+                                    <td>14 kg</td>
+                                    <td>Stormy white</td>
+                                    <td>All around</td>
+                                    <td>relace dogs</td>
+                                </tr>
+                                <tr>
+                                        <td>Gold rabbits</td>
+                                        <td>9 kg</td>
+                                        <td>Golden Yellow</td>
+                                        <td>Cold regions</td>
+                                        <td>Beautician</td>
+                                    </tr>
+                                <tr>
+                                    <td colspan="5">More Details<a href="https://en.wikipedia.org/wiki/List_of_rabbit_breeds">CLICK HERE</a></td>
+                                </tr>
+        
+                </table>
+              
+            </div>
+            
+          <div id="form">
+              <h2>Report a Rabbit</h2>
+              <form method="POST" action="https://dev.itas.ca/~croftd/processForm.php ">
+                  <fieldset>
+                        <legend>Report of a rabbit</legend>
+                        <label for="name" ><span class="redS">*</span>Name:</label>
+                        <input type="text"   name="name" id="name" required><br><br>
+                        <label for="weight" ><span class="redS">*</span>Weight:</label>
+                        <input type="number"   name="weight" id="weight" required><br><br>
+                        <label for="Color" ><span class="redS">*</span>Color:</label>
+                        <input type="text"   name="color" id="Color" required><br><br>
+                        <label><span class="redS">*</span>HomeZone:</label>
+                        <select>
+                        
+                                <option value="ZenAnimal" > zen Animal</option>     
+                                <option value="the wilds"> The wids</option>     
+                                <option value="itrabbits"> IT Rabbits</option>    
+                                <option value="others" >Others</option>      
+                                
+                     </select> <br><br>
+                        <label for="special" ><span class="redS">*</span>Special Power:</label>
+                        <input type="text"   name="special" id="special" required><br><br>
+                        <input type="submit" id="mySubmit" value="SUBMIT">
+                    </fieldset>
+              </form>
+  </body>
+</html>

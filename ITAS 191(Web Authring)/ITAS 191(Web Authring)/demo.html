@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+    #wrapper
+    {
+        border: 2px solid black;
+    }
+    form 
+    {
+         background-color:rgb(173, 216, 230);              
+         font-family: Arial, sans-serif; padding: 10px; 
+    } 
+    label  
+    { 
+         float: left;
+         width: 100px; clear: left; text-align: right;             
+        padding-right: 10px; margin-top: 10px; 
+    }
+     input, textarea 
+     {
+          margin-top: 10px; display: inline; 
+     }  
+     #mySubmit 
+     {
+          margin-left: 110px;
+     } 
+     .redS
+     {
+         color: red;
+     }
+     fieldset
+     {
+         color: black;
+     }
+     </style>
+</head>
+<body>
+    
+    <h1>Bathub Race Signup Sheet</h1>
+    <h4>Note:MANDATORY FIELD =<span class="redS">*</span></h4>
+    <div id="wrapper">
+    <form method="POST" action="https://dev.itas.ca/~croftd/processForm.php ">
+        
+            <label for="Select Event"><span class="redS">*</span>Select event:</label>
+            <input type="radio" required name="SelectEvent" value="Stock">Stock<br>
+            <input type="radio"  required name="SelectEvent" value="Modified">Modified<br>
+            <label for="Last Name"><span class="redS">*</span>Last Name:</label>
+            <input type="text"  required name="Lname"><br><br>
+            <label for="First Name:"><span class="redS">*</span>FirstName:</label>
+            <input type="text"  required name="Fname"><br><br>
+            <label for="Address:"><span class="redS">*</span>Address:</label>
+            <input type="text"  required name="Address"><br><br>
+            <label for="City"><span class="redS">*</span>City:</label>
+            <input type="text" name="City"><br><br>
+            <label for="province"><span class="redS">*</span>Province:</label>
+            <select>
+                
+                 <option value="BC"> BC</option>     
+                 <option value="Ontariio"> Ontario</option>     
+                 <option value="Quebec"> Quebec</option>    
+                 <option value="Alberta">Alberta</option>      
+                 <option value="Manitoa"> Manitoa</option>    
+                 <option value="Nova Scotia"> Nova Scotia</option>
+            </select> <br><br>
+            <label for="Postal code"><span class="redS">*</span>Postal Code/Zip Code</label>
+            <input type="text"  required name="Postal Code"><br><br>
+            <label for="Country"><span class="redS">*</span>Country</label>
+            <input type="text"  required name="Country"><br><br>       
+            <label for="email"><span class="redS">*</span>Email:</label>
+            <input type="text"  required name="email" id="email"><br><br>
+            <label for="myDate"><span class="redS">*</span>Choose a Date:</label>
+            <input type="date"  required name="myDate" id="myDate"><br><br>
+            <label for="Gender"> <span class="redS">*</span> Gender:</label>
+            <input type="radio"  required name="Select Event" value="Male">Male<br>
+            <input type="radio"  required name="Select Event" value="Female">Female<br>
+            <label for="Boat Names"> <span class="redS">*</span>Boat name:</label>
+            <input type="text"  required name="Boat name"><br><br>
+
+            <label for="Comment">Comment:</label>
+            <textarea type="Comment" ></textarea>
+            <br>
+            <br>
+            <label for="agreement"> <span class="redS">*</span>I agree to the waiver</label>
+            <input type="checkbox" required name="yes" value="yes">yes
+            <br><br>
+             
+            <input type="submit" id="mySubmit" value="submit">
+            
+        
+    </form>
+</div>
+</body>
+</html>

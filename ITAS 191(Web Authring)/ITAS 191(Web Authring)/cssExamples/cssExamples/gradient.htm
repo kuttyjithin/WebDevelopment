@@ -1,0 +1,79 @@
+<html>
+<head>
+	<title>CSS Gradients</title>
+</head>
+<style type="text/css">
+<!--
+div.one {position: relative; 
+		TOP: 10; 
+		left:10; 
+		width:95%; 
+		height:50px;  
+		font-family:verdana; 
+		color:black; 
+		font-size: 8pt; 
+		font-weight: normal; 
+		padding:10px; 
+		border:1px solid black; 
+		z-index: 5; 
+		filter:progid:DXImageTransform.Microsoft.Gradient(endColorstr='#ffffff', startColorstr='#99CCFF', gradientType='1');
+		}
+		
+div.two {position: relative; 
+		TOP: 20; 
+		left:10; 
+		width:95%; 
+		height:50px;  
+		font-family:verdana; 
+		color:black; 
+		font-size: 8pt; 
+		font-weight: normal; 
+		padding:10px; 
+		border:1px solid black; 
+		z-index: 5; 
+		filter:progid:DXImageTransform.Microsoft.Gradient(endColorstr='#00ffffff', startColorstr='#FF99CCFF', gradientType='1');
+		}
+		
+div.three {position: relative; 
+		TOP: 30; 
+		left:10; 
+		width:95%; 
+		height:50px;  
+		font-family:verdana; 
+		color:black; 
+		font-size: 8pt; 
+		font-weight: normal; 
+		padding:10px; 
+		border:1px solid black; 
+		z-index: 5; 
+		filter:progid:DXImageTransform.Microsoft.Gradient(endColorstr='#00ffffff', startColorstr='#FF99CCFF', gradientType='0');
+		}	
+			
+div.head {font-size:13pt; font-weight:bold}		
+
+body {margin:0; font-family:verdana; font-size:70%}
+-->
+</style>
+</head>
+
+<body>
+
+<div class="one">
+<div class="head">Horizontal Gradient</div><br>
+This gradient uses a startColorstr value of #99CCFF and an endColorstr value of #FFFFFF.<br>
+The gradientType attribute is set to 1.</div>
+
+<div class="two">
+<div class="head">Horizontal Gradient with Transparency</div><br>
+Adding FF for to the startColorstr and 00 to the endColorstr adds a transparent gradient.</div>
+
+<div class="three">
+<div class="head">Vertical Gradient with Transparency</div><br>
+This is the the same as the above gradient, <br>
+however the gradientType attribute is set to 0.</div>
+
+<img src="chess_s.jpg" style="position: absolute; TOP: 0; left:55%; ">
+
+</body>
+</html>
+

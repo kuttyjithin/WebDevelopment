@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>ITAS 191 Midterm - Rabbits of VIU</title>
+
+  <style>
+	/**************************************
+	RESPONSIVE LAYOUT CSS
+	**************************************/
+	.wrapper {
+	  max-width: 100%;
+	  margin: 0 auto;
+	}
+
+	@media screen and (min-width: 800px) {
+
+	  .wrapper {
+	    max-width: 90%;
+	  }
+	  
+	  header {
+		
+	    width: 100%;
+			color: red;		
+	  }
+	  
+	  nav, section {
+	    float: left;
+	  }
+
+	  nav {
+	    width: 20.83333%;
+	    margin-right: 1.041667%;
+	  }
+
+	  section {
+	    width: 78.125%;
+	  }
+	  
+	}
+
+	@media screen and (min-width: 1000px) {
+
+	  .wrapper {
+	    max-width: 90%;
+	  }
+	  
+	}
+
+	img {
+    	max-width: 100%;
+    	height: auto;
+	}
+
+	/**************************************
+	CSS TO MAKE THE EXAMPLE LOOK PRETTY
+	**************************************/
+
+	*, *:before, *:after {
+	  -moz-box-sizing: border-box;
+	  -webkit-box-sizing: border-box;
+	  box-sizing: border-box;
+	}
+
+	body {
+	  background: #2980b9;
+	  color: #FFF;
+	  font-family: Helvetica;
+	  /*text-align: center;*/
+	  margin: 0;
+	}
+
+	header,
+	nav,
+	section {
+	  border: 1px solid rgba(255,255,255,0.8);
+	  margin-bottom: 10px;
+	  border-radius: 3px;
+	}
+
+	header {
+	  padding: 20px 0;
+	}
+
+	nav, section {
+	  padding: 100px 0;
+	}
+
+	/**************************************
+	       ADD YOUR OWN CSS HERE
+	**************************************/
+  
+	table, th, td
+  {
+   border: 1px solid black;
+   border-collapse: collapse;
+   margin-left:auto; 
+   margin-right:auto;
+	 font-family: Verdana, Geneva, Tahoma, sans-serif;
+	 color: red;
+  }
+  th, td
+  {
+    padding: 5px;
+    text-align: center;    
+  }
+	form 
+    {
+         background-color:rgb(173, 216, 230);              
+         font-family: Arial, sans-serif; padding: 10px; 
+				 color: black;
+				 font-size: 18px;
+    } 
+    label  
+    { 
+         float: left;
+         width: 100px; clear: left; text-align: right;             
+         padding-right: 10px; margin-top: 10px; 
+    }
+     input, textarea 
+     {
+          display: inline; 
+          margin-top: 10px; 
+     }  
+     #mySubmit 
+     {
+          margin-left: 110px;
+     } 
+		 .redS
+     {
+         color: red;
+     }
+		 /*Adding differnt font for each descrription*/
+		 #descriptions
+		 {
+			 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+			 font-size: 24px;
+			 color: yellow;
+		 }
+		 #zenrabbits
+		 {
+			 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+			 
+			 color: green;
+		 }
+		 #itrabbits
+		 {
+			 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+			 
+			 color:white;
+		 }
+		 #wilds
+		 {
+       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+			 color: black;
+		 }
+		 /*Adding a different coloour for the heading */
+		 h3
+		 {
+			 color: red;
+		 }
+		 /*Moifying the Header by adding backgroung image*/
+		 header
+		 {
+			background-image: url(https://dev.itas.ca/~jithin.jose/baground.jpg);
+			opacity: 0.6;
+			text-shadow:2px 2px #ff0000;
+			text-align: center;
+		 }
+		 /*Changing the a href*/
+		 a
+		 {
+			 color: red;
+		 }
+		 
+  </style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<header>
+	<h1>Rabbits of VIU</h1>
+</header>
+
+<nav>
+  	<ol>
+  	<li><a href="#zenrabbits">Zen Rabbits</a></li>
+  	<li><a href="#itrabbits">IT Rabbits</a></li>
+  	<li><a href="#wilds">The Wilds</a></li>
+    </ol>
+</nav>
+
+<section id="content">
+
+  <div id="map">
+  	<img src="https://dev.itas.ca/~croftd/VIU_RabbitsMap.png" alt="imagesof map" width="960" height="802" usemap="#india">
+		<map name="india" id="india">
+					
+					<area shape="circle" coords="380,178,20" href="#zenrabbits" alt="zenrabbits" />
+					<area shape="circle" coords="495,486,20" href="#itrabbits" alt="itrabbits" />
+					<area shape="rect" coords="736,315,960,802" href="#wilds" alt="wilds" />
+					
+				</map> 
+	</div>
+	
+  <div id="descriptions">
+  	<h2>Descriptions</h2>
+  	<div id="zenrabbits">
+			<h3>Zen Rabbits</h3>
+			<p>They are the most beautiful rabbits in the world. Moreover, the most poisonous rabbits in the world
+				<br> .However, the people are not allowed to consume or kill this rabbit.
+			</p>
+			<img src="https://dev.itas.ca/~jithin.jose/zenrabits.jpg" alt="a cute zen rabits">
+		</div>
+  	<div id="itrabbits">
+			<h3>IT Rabbits</h3>
+			<p>This is one of the most intelligent rabbits in the world.This rabbits can act like a dog in main cases.
+				<br> Not only this rabbits helped the police but also saved the life of many people.
+			</p>
+			<img src="https://dev.itas.ca/~jithin.jose/itrabits.jpg" alt="a small it rabit">
+		</div>
+  	<div id="wilds">
+			<h3>The Wilds</h3>
+			<p>This is the most dangerous animal in the world. This animal does not kill the humans by poisoning the fruits but also consume animals.
+				<br>
+			</p>
+			<img src="https://dev.itas.ca/~jithin.jose/wildrabit.png" alt="a wild rabit">
+
+		</div>
+	</div>
+	
+  <div id="topFiveRabbits">
+		<h2>Top Five Rabbits</h2>
+		<table>
+			
+				<caption>Top 5 Rabbits</caption>
+			<tr>
+				<th>Name </th>
+				<th>Weight</th>
+				<th>Colour</th>
+				<th>Home zone </th>
+				<th>Special power</th>
+			</tr>
+			<tr>
+				<td>IT Rabbits</td>
+				<td rowspan="2">12.5kg</td>
+				<td>green</td>
+				<td>IT156</td>
+				<td>power of dog</td>
+			</tr>
+      <tr>
+					<td>Zen Rabbits</td>					
+					<td>brown</td>
+					<td>Cafteria</td>
+					<td>Poison the fruits</td>
+				</tr>
+				<tr>
+						<td>The Wilds</td>
+						<td>15 kg</td>
+						<td>blue</td>
+						<td>Outside VIU</td>
+						<td>Steal items</td>
+					</tr>
+					<tr>
+							<td>Stormy Rabbits</td>
+							<td>14 kg</td>
+							<td>Stormy white</td>
+							<td>All around</td>
+							<td>relace dogs</td>
+						</tr>
+						<tr>
+								<td>Gold rabbits</td>
+								<td>9 kg</td>
+								<td>Golden Yellow</td>
+								<td>Cold regions</td>
+								<td>Beautician</td>
+							</tr>
+						<tr>
+							<td colspan="5">More Details<a href="https://en.wikipedia.org/wiki/List_of_rabbit_breeds">CLICK HERE</a></td>
+						</tr>
+
+		</table>
+  	
+	</div>
+	
+  <div id="form">
+  	<h2>Report a Rabbit</h2>
+  	<form method="POST" action="https://dev.itas.ca/~croftd/processForm.php ">
+  		<fieldset>
+				<legend>Report of a rabbit</legend>
+				<label for="name" ><span class="redS">*</span>Name:</label>
+				<input type="text"   name="name" id="name" required><br><br>
+				<label for="weight" ><span class="redS">*</span>Weight:</label>
+				<input type="number"   name="weight" id="weight" required><br><br>
+				<label for="Color" ><span class="redS">*</span>Color:</label>
+				<input type="text"   name="color" id="Color" required><br><br>
+				<label><span class="redS">*</span>HomeZone:</label>
+				<select>
+                
+						<option value="ZenAnimal" > zen Animal</option>     
+						<option value="the wilds"> The wids</option>     
+						<option value="itrabbits"> IT Rabbits</option>    
+						<option value="others" >Others</option>      
+						
+			 </select> <br><br>
+				<label for="special" ><span class="redS">*</span>Special Power:</label>
+				<input type="text"   name="special" id="special" required><br><br>
+				<input type="submit" id="mySubmit" value="SUBMIT">
+			</fieldset>
+  	</form>
+	</div>
+	
+</section>
+
+</div>
+
+</body>
+</html>

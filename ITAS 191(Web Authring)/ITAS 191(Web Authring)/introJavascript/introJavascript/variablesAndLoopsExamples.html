@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <script>
+    function runStuff() {
+      // From:
+        // https://codepen.io/towc/post/examplejs-1
+
+        // pronounced: "console DOT log 42"
+        console.log(42);
+
+        // 42
+        let number = 42;
+        console.log(number);
+
+        
+        // 42
+        number = 43;
+        console.log(number);
+
+        let string = "Hello, World!";
+        console.log(number);
+        console.log(string);
+        // 42
+        // "Hello, World!"
+        let x = 2;
+        let y = x + 1;
+        console.log(y);
+        // 3
+        //let x = 2;
+        y = 3;
+        let z = x + y;
+        console.log(z);
+        // 5
+        let tau = 6.283185;
+        console.log(tau);
+       
+        // 3
+        let string = "Hello, World!";
+        console.log(string)
+        // "Hello, World!"
+        let greeting = "Hello, ";
+        let subject = "World";
+        console.log(greeting + subject);
+        // "Hello, World"
+        let string = "12345";
+        // pronounced: "string DOT length"
+        console.log(string, string.length);
+        // "12345", 5
+        let string = "01234";
+        // pronounced: string OF 2.
+        //             depends very much on context
+        let thirdLetter = string[2];
+        console.log(string, thirdLetter);
+        // "01234", "2"
+        let string = "abcd";
+        console.log(string, string[0], string[1], string[2], string[3]);
+        // "abcd", "a", "b", "c", "d"
+        let string = "hello";
+        let x = 1;
+        console.log(string[x]);
+        // "e"
+        let string = "hello";
+        let lastLetter = string[string.length - 1];
+        console.log(lastLetter);
+        // "o"
+        let boolean = true;
+        console.log(boolean);
+        // true;
+        let boolean = false;
+        console.log(boolean);
+        // false
+        let learning = true;
+        // pronounced: "NOT learning"
+        var beingLazy = !learning;
+        console.log(beingLazy);
+        // false;
+        let learning = true;
+        let langIsJS = true;
+        // pronounced: "learning AND lang is JS"
+        let learningJS = learning && langIsJS;
+        console.log(learningJS);
+        // true
+        console.log(true && true, true && false);
+        console.log(false && true, false && false);
+        // true, false
+        // false, false
+        let swimming = true;
+        let sailing = false;
+        // pronounced: "swimming OR sailing"
+        let isOnWater = swimming || sailing;
+        console.log(isOnWater);
+        // true
+        console.log(true || true, true || false);
+        console.log(false || true, false || false);
+        // true, true
+        // true, false
+        let learning = true;
+        let langIsJS = true;
+        let notLearningJS = !(learning && langIsJS);
+        console.log(notLearningJS);
+        // false
+        console.log(1 === 1);
+        // true
+        console.log(1 === 2);
+        // false
+        console.log(false === false);
+        // true
+        console.log(!(true === true), !true);
+        console.log(true !== true);
+        // false, false
+        // false
+        console.log(1 !== 2, !(1 === 2));
+        // true, true
+        let is1TheSameAs2 = 1 === 2;
+        console.log(is1TheSameAs2);
+        // false
+        let x = 1;
+        let y = 2;
+        let isXLessThanY = x < y;
+        let isXGreaterThanY = x > y;
+        let isXLessThanOrEqualToY = x <= y;
+        let isXGreaterThanOrEqualToY = x >= y;
+        console.log(isXLessThanY, isXGreaterThanOrEqualToY);
+        // true, false
+        if(true) {
+          // glossary: truthy means "true-like".
+          //           the opposite is "falsy"
+          console.log("condition is truthy");
+        }
+        // "condition is truthy"
+        if(false) {
+          console.log("condition is truthy");
+        }
+        //
+        // nothing is logged
+        if(1 === 1) {
+          console.log("1 is the same as 1");
+        }
+        // "1 is the same as 1"
+        if(false) {
+          console.log("condition is truthy");
+        } else {
+          console.log("condition is falsy");
+        }
+        // "condition is falsy"
+        if(1 === 2) {
+          console.log("1 is the same as 2");
+        } else {
+          console.log("1 is NOT the same as 2");
+        }
+        // "1 is NOT the same as 2"
+        let x = 1;
+        let y = 2;
+        if(x === y) {
+          console.log("x is the same as y");
+        } else {
+          console.log("x is NOT the same as y");
+        }
+        // "x is NOT the same as y"
+        let learning = true;
+        let langIsJS = true;
+        if(learning && langIsJS) {
+          console.log("you are learning JS");
+        } else {
+          console.log("you're either not learning, or the language is not JS");
+        }
+        // "you are learning JS"
+        let x = 1;
+        x = 2;
+        console.log(x);
+        // 2
+        let x = 1;
+        x = x + 2;
+        console.log(x);
+        // 3
+        let x = 1;
+        let y = 2;
+        x = y + 2;
+        console.log(x);
+        // 4
+        let x = 1;
+        let condition = true;
+        if(condition) {
+          x = 2;
+        }
+        console.log(x);
+        // 2
+        let i = 0;
+        console.log(i);
+        i = i + 1;
+        console.log(i);
+        i = i + 1;
+        console.log(i);
+        i = i + 1;
+        console.log(i);
+        // 0
+        // 1
+        // 2
+        // 3
+        let i = 0;
+        while(i < 4) {
+          console.log(i);
+          i = i + 1;
+        }
+        // 0
+        // 1
+        // 2
+        // 3
+        let string = "hello";
+        let i = 0;
+        while(i < string.length) {
+          console.log(string[i]);
+          i = i + 1;
+        }
+        // "h"
+        // "e"
+        // "l"
+        // "l"
+        // "o"
+        let sum = 0;
+        let i = 0;
+        while(i < 4) {
+          i = i + 1;
+          sum = sum + i;
+          console.log(i, sum);
+        }
+        console.log(sum);
+        // 0, 0
+        // 1, 1
+        // 2, 3
+        // 3, 6
+        // 6
+        let str = "Hell";
+        let end = "o"
+        let i = 0;
+        while(i < 10) {
+          str = str + end;
+          i = i + 1;
+        }
+        console.log(str);
+        // "Helloooooooooo"
+        let str = " batman!"
+        let start1 = "a"
+        let start2 = "n"
+        let i = 0;
+        while(i < 12) {
+          if(i % 2 === 0) {
+            str = start1 + str;
+          } else {
+            str = start2 + str;
+          }
+
+          // yes, you could just have
+          // str = "na" + str
+          // and only loop 6 times
+
+          i = i + 1;
+        }
+        console.log(str);
+        // "nananananana batman!"
+        let str = " batman!"
+        let prefix = "an";
+        let i = 0;
+        while(i < 12) {
+          str = prefix[i % 2] + str;
+          // same as previous example
+          i = i + 1;
+        }
+        console.log(str);
+        // "nananananana batman!"
+      
+    }
+
+    function showMessage() {
+      console.log("Hi from JAvaScript");
+      alert("Hi from an alert box");
+    }
+  </script>
+
+  <style>
+
+  </style>
+ </head>
+ <body onload="runStuff();">
+   <h1>Intro to Canvas</h1>
+   <canvas id="canvas" width="400" height="400"></canvas>
+
+   <button onclick="showMessage()">Do Stuff</button>
+ </body>
+</html>

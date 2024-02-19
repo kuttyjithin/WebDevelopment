@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Final Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/jpg" href="images/jj.jpg"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/myStyle.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/footer.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/social.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css"/>
+    
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+    <style>
+        /* Make the image fully responsive */
+        .carousel-inner img {
+            width: 100%;
+            height: auto;
+        }
+        #right
+        {
+          float:right;
+        }
+
+        body
+       {
+        padding-top: 54px;
+       }
+
+       @media (min-width: 992px) {
+       body {
+       padding-top: 56px;
+       }
+       }
+        
+     </style>
+</head>
+<body>
+
+<!-- Header with different Links -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="index.html" style="color:blue">JJ CODE</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="c++.html">C++</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="java.html">JAVA</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="csss.html">CSS</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="html.html">HTML</a>
+          </li>
+          <li class="nav-item active">
+            <div id="right">
+            <a class="nav-link" href="sign.html">SIGN IN </a>
+          </div>
+          </li>
+          
+            <li class="nav-item active">
+                <div id="right">
+                <a class="nav-link" href="signup.html">SIGN UP </a>
+              </div>
+              </li>
+        </ul>
+        <form class="form-inline mt-2 mt-md-0"  method="POST" action="https://dev.itas.ca/~croftd/processForm.php ">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="background-color:brown">Search</button>
+        </form>
+      </div>
+    </nav>
+  </header>
+
+<!-- Page Content -->
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-lg-3">
+
+      <h1 class="my-4">Chapters</h1>
+      <div class="list-group">
+        <a href="sign.html" class="list-group-item">Introduction</a>
+        <a href="sign.html" class="list-group-item">Variables and Operators</a>
+        <a href="sign.html" class="list-group-item">Input and Output</a>
+        <a href="sign.html" class="list-group-item">Void Methods</a>
+        <a href="sign.html" class="list-group-item">Conditionals and Logic</a>
+        <a href="sign.html" class="list-group-item">Value Methods</a>
+        <a href="sign.html" class="list-group-item">Loops</a>
+        <a href="sign.html" class="list-group-item">Arrays</a>
+        <a href="sign.html" class="list-group-item">String and Things</a>
+        <a href="sign.html" class="list-group-item">Classes and Objects</a>
+      </div>
+
+    </div>
+    <!-- /.col-lg-3 -->
+
+    <div class="col-lg-9">
+        <div id="video">
+        <div class="embed-responsive embed-responsive-16by9"> 
+            <object width="560" height="315" data="https://www.youtube.com/embed/uxKHuT-8QUg" ></object>
+       
+        </div> 
+      </div>
+    </div>
+
+      <div class="row">
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="images/java1.png" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="sign.html">Variable and Operators</a>
+              </h4>
+              <p class="card-text">A Java variable is a piece of memory that can contain a data value. A variable thus has a data type. Data types are covered in more
+                 detail in the text on Java data types. Variables are typically used to store information which your Java program needs to do its job.</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="images/javaarray.jpg" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="sign.html">Arrays</a>
+              </h4>
+              <p class="card-text">An array is a container object that holds a fixed number of values of a single type. The length of an array is established when the array is created. After creation, its length is fixed. 
+                You have seen an example of arrays already, in the main method of the "Hello World!" application. </p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="images/javaclass.png" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="sign.html">Classes and Objects</a>
+              </h4>
+              <p class="card-text">Objects have states and behaviors. Example: A dog has states - color, 
+                name, breed as well as behaviors – wagging the tail, barking, eating. An object is an instance of a class.<br><br>
+                A class can be defined as a template/blueprint that describes the behavior/state that the object of its type support.</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100">
+            <a href="sign.html"><img class="card-img-top" src="images/javainhertance.jpg" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Inhertance</a>
+              </h4>
+              <p class="card-text">Inheritance can be defined as the process where one class acquires the properties (methods and fields) of another.
+                 With the use of inheritance the information is made manageable in a hierarchical order.</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="images/javavari.png" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="sign.html">Strings</a>
+              </h4>
+              <p class="card-text">Strings, which are widely used in Java programming, are a sequence of characters. In the Java programming language, strings are objects.</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="images/java.jpg" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="sign.html">Library</a>
+              </h4>
+              <p class="card-text">The Java Class Library is a set of dynamically loadable libraries that Java applications can call at run time. Because the Java Platform is not dependent on a specific operating system, applications cannot rely on any of the platform-native libraries. Instead,
+                 the Java Platform provides a comprehensive set of standard class libraries, containing the functions common to modern operating systems. </p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.col-lg-9 -->
+
+  </div>
+  <!-- /.row -->
+
+</div>
+<!-- /.container -->
+
+ <!--Footer -->
+
+
+ <footer class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md">
+      <img src="images/jj.jpg" alt="icon" height="75" width="75">
+      <small class="d-block mb-3 text-muted">&copy; 2018-2019</small>
+    </div>
+    <div class="col-6 col-md">
+      <h5>Features</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="text-muted" href="c++.html">C++</a></li>
+        <li><a class="text-muted" href="java.html">JAVA</a></li>
+        <li><a class="text-muted" href="html.html">HTML</a></li>
+        <li><a class="text-muted" href="csss.html">CSS</a></li>
+        
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+        <h5>Resources</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="gallary.html">Gallary</a></li>
+          <li><a class="text-muted" href="table.html">Analysis</a></li>                     
+        </ul>
+      </div>
+    
+    
+    <div class="col-6 col-md">
+      <h5>About</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="text-muted" href="location.html">Location</a></li>
+        
+      </ul>
+    </div>
+
+    <div class="col-6 col-md">
+        <h5>Support</h5>
+        <a href="https://www.facebook.com/Jjcode-560082237737788/" class="fa fa-facebook"></a>                  
+        <a href="https://twitter.com/JithinJ27561689" class="fa fa-twitter"></a>
+        <a href="https://www.instagram.com/?hl=en" class="fa fa-instagram"></a>
+        
+      </div>
+
+  </div>
+</footer>
+
+
+
+  </body>
