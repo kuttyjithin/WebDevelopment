@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>A play with form</title>
+    <meta name="Form" content="width=device-width, initial-scale=1">
+
+    <style>
+        #wrapper
+        {
+            border: 2px solid black;
+        }
+        form
+        {
+            background-color:rgb(173, 216, 230);
+            font-family: Arial, sans-serif; padding: 10px;
+        }
+        label
+        {
+            float: left;
+            width: 100px; clear: left; text-align: right;
+            padding-right: 10px; margin-top: 10px;
+        }
+        input, textarea
+        {
+            display: inline;
+            /* margin-top: 10px; */
+        }
+        #mySubmit
+        {
+            margin-left: 110px;
+        }
+        .redS
+        {
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+<div id="wrapper">
+
+<h2>Add a new House!</h2>
+
+<form action="/house/add" method="POST" enctype="multipart/form-data">
+  <label for="Address"><span class="redS">*</span>Address:</label>
+  <input type="text" id="Address" placeholder="address" name="address"><br><br>
+  <label for="price"><span class="redS">*</span>Price:</label>
+  <input type="number" id="price" placeholder="price" name="price"><br><br>
+  <label for="size"><span class="redS">*</span>Size:</label>
+  <input type="number" id="size" placeholder="size" name="size"><br><br>
+  <label for="description"><span class="redS">*</span>Description:</label>
+  <input type ="text" id="description" placeholder="description" name="description"><br><br>
+  <label for="location"><span class="redS">*</span>Description:</label>
+  <input type="text" id="location" placeholder="location" name="location"><br><br>
+  <input type="file" name="photos" multiple />
+  <br><button type="submit">Submit</button>
+</form>
+
+</div>
+</body>
+<html>

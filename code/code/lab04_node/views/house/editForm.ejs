@@ -1,0 +1,44 @@
+
+<form action="/house/update/<%= house.id %>" method="POST" enctype="multipart/form-data">
+
+  <input type="text" placeholder="address" name="address" 
+	<% if (house) { %>
+	  value="<%= house.address %>"
+	<% } %>
+  >
+  <input type="number" placeholder="price" name="price"
+
+	<% if (house) { %>
+	  value="<%= house.price %>"
+	<% } %>
+
+  >
+  <input type="number" placeholder="size" name="size"
+	
+	<% if (house) { %>
+	  value="<%= house.size %>"
+	<% } %>
+  >
+
+  <input type="text" placeholder="description" name="description"
+	
+	<% if (house) { %>
+	  value="<%= house.description %>"
+	<% } %>
+  >
+  <input type="text" placeholder="latitude" name="lat"
+	
+	<% if (house) { %>
+	  value="<%= house.location %>"
+	<% } %>
+  >
+  <input type="text" placeholder="longitude" name="long"
+	
+	<% if (house) { %>
+	  value="<%= house.location %>"
+	<% } %>
+  >
+
+  <input type="file" name="photos" multiple />
+  <button type="submit">Submit</button>
+</form>

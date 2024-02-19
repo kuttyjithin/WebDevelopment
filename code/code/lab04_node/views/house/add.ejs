@@ -1,0 +1,19 @@
+<%- include('header.ejs') -%> 
+<h2>Add a new House!</h2>
+<form action="/house/add" method="POST" enctype="multipart/form-data">
+  <label for="Address"><span class="redS">*</span>Address:</label>
+  <input type="text" placeholder="address" id="address" name="address"><br><br>
+  <label for="price"><span class="redS">*</span>Price:</label>
+  <input type="number" placeholder="price" id="price" name="price"><br><br>
+  <label for="size"><span class="redS">*</span>Size:</label>
+  <input type="number" placeholder="size" id="size" name="size"><br><br>
+  <label for="description"><span class="redS">*</span>Description:</label>
+  <input type ="text" placeholder="description" id="Description" name="description"><br><br>
+  <label for="userlat"><span class="redS">*</span>Lattiude:</label>
+   <input type="text" placeholder="latitude" name="userLat" id="userlat"><br><br>
+   <label for="longitiude"><span class="redS">*</span>Longitiude:</label>
+  <input type="text" id="longitiude" placeholder="latitude" name="userLong"><br><br> 
+  <input type="file" name="photos" multiple />
+  <br><button type="submit">Submit</button>
+</form>
+ 

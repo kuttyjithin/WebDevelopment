@@ -1,0 +1,37 @@
+<body>
+<h1>Welcome to Node Firestore Realty!</h1>
+<h2>Houses for Sale:</h2>
+
+<ul class="houses">
+  <% for(var i=0; i<houses.length; i++) {%>
+    <li class="house">
+      <span>Address: <%= houses[i].address %></span>
+      <span>Price: <%= houses[i].price %></span>
+      <span>Size: <%= houses[i].size %></span>
+      <span>Size: <%= houses[i].location %></span>
+      
+    </li>
+  <% } %>
+</ul>
+
+<h2>Add a new House!</h2>
+<form action="/add" method="POST">
+  <input type="text" placeholder="address" name="address">
+  <input type="number" placeholder="price" name="price">
+  <input type="number" placeholder="size" name="size">
+  <input type ="text" placeholder="description" name="description">
+  <input type="text" placeholder="location" name="location">
+  <button type="submit">Submit</button>
+</form>
+</body>
+</html>
+
+ <!-- <td><%
+        if (typeof houses[i].photos[0] === 'undefined') {%>
+          <img src="/default.jpg" width=100px alt="not image set">
+        <% } else { %>
+          <img src="/<%= houses[i].photos[0] %>" width=100px alt="House photo">
+        <%
+        }
+        %> 
+      </td>-->

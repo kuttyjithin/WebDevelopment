@@ -1,0 +1,52 @@
+<%- include('header.ejs') -%> 
+<h2>Edit the House</h2>
+<form action="/house/update/<%= house.id %>" method="POST" enctype="multipart/form-data">
+    <label for="Address"><span class="redS">*</span>Address:</label>
+	<input type="text" placeholder="address" name="address" 
+	<% if (house) { %>
+	  value="<%= house.address %>"
+	<% } %>
+  ><br><br>
+  <label for="Address"><span class="redS">*</span>Price:</label>
+  <input type="number" placeholder="price" name="price"
+
+	<% if (house) { %>
+	  value="<%= house.price %>"
+	<% } %>
+
+  ><br><br>
+  <label for="Address"><span class="redS">*</span>Size:</label>
+  <input type="number" placeholder="size" name="size"
+	
+	<% if (house) { %>
+	  value="<%= house.size %>"
+	<% } %>
+  ><br><br>
+  <label for="Address"><span class="redS">*</span>Description:</label>
+  <input type="text" placeholder="description" name="description"
+	
+	<% if (house) { %>
+	  value="<%= house.description %>"
+	<% } %>
+  ><br><br>
+  <label for="Address"><span class="redS">*</span>Latitude:</label>
+  <input type="text" placeholder="latitude" name="userLat"
+	
+  <% if (house) { %>
+	value="<%= house.location._latitude %>"
+  <% } %>
+><br><br>
+<label for="Address"><span class="redS">*</span>Longtitude:</label>
+<input type="text" placeholder="longitude" name="userLong"
+  
+  <% if (house) { %>
+	value="<%= house.location._longitude %>"
+  <% } %>
+><br><br>
+
+  <input type="file" name="photos" <% if (house) { %>
+	value="<%= house.photos[0] %>"
+  <% } %> multiple /><br><br>
+
+  <button type="submit">Submit</button>
+</form>

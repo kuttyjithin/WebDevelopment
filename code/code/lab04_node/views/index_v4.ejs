@@ -1,0 +1,76 @@
+<%- include('header.ejs') -%> 
+
+    <main role="main" class="inner cover">
+      <h1 class="cover-heading">N0 1 House Selling Website.</h1>
+      <p class="lead">New listings daily, right at your fingertips.</p>
+      
+    </main>
+<h2>Houses for Sale:</h2>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th>Address</th>
+    <th>Price</th>
+    <th>Size</th>
+    <th>Description</th>
+    <th>Photos</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <% for(var i=0; i<houses.length; i++) {%>
+    <tr class="house">
+      <td><%= houses[i].address %></td>
+      <td><%= houses[i].price %></td>
+      <td><%= houses[i].size %></td>
+      <td style="color:red"><%= houses[i].description %></td>
+      <td><%
+        for(j=0;j<houses[i].photos.length;j++){
+        if (typeof houses[i].photos[j] === 'undefined') {%>
+          <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+          <img src="/default.jpg" width=100px alt="not image set">
+        <% } else { %>
+          <img src="/<%= houses[i].photos[j] %>" width=100px alt="House photo">
+        <%
+        }}
+        %> 
+            </div>
+            </div>
+      </td>
+      
+
+      <!-- croftd - this is used for the update operation -->
+      <td><a href="/house/edit/<%= houses[i].id %>">Edit</a></td>
+      <td><a href="/house/delete/<%= houses[i].id %>">Delete</a></td>
+    
+      <!-- example making an asynchrous call to a route - see public/main.js -->
+      <!--
+      <td>
+        <button id="delete" value="<%= houses[i].id %>">Delete</button>
+      </td>
+      -->
+    </tr>
+  <% } %>
+</table>
+
+<div>
+</div>
+
+</div>
+<!-- Note express will resolve the path to main.js since we set 
+     app.use(express.static('public')) in server.js
+ -->
+ 
+
+
+
+</body>
+</html>
+ <!-- include any JavaScript scripts we want to send back for use on the client side -->
+<script src="main.js"></script>
+
+</body>
+</html>

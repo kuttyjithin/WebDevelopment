@@ -1,0 +1,7 @@
+1. how poke get json is called when we make the file using the $poke in the
+foreach loop.
+2. How to mkae a json method in the the pokemon class
+3, IS the load pokemon created by me is right.
+4. THe output before wthe of the indvidual json in two ways.
+5. Purpose of different variables in the different class.
+6. have i done a big blunder or do i ah ve tp rewrite the progrA 
